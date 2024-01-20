@@ -60,7 +60,6 @@ public class ToDoListApplication {
                         list = (List<ToDoV2>) objectOutputStream.readObject();
                     }
                 } else if (filename.endsWith(".xml")) {
-
                     list = xmlMapper.readValue(file, xmlMapper.getTypeFactory().constructCollectionType(List.class, ToDoV2.class));
                 }
             } catch (IOException | ClassNotFoundException e) {
